@@ -12,6 +12,12 @@ db.reactions.insertMany([
     {_id: 4, id_track: 4, id_user: 4, reaction: 4}
 ])
 
+//Вывести названия треков продолжительностью от 1 до 10 мин
+db.tracks.find(
+    { duration_secs: { $gte: 1 * 60, $lte: 10 * 60 } },
+    { title: 1, _id: 0 }
+)
+
 //реализовать плейлисты (список воспроизведения)
 db.playlists.insertMany([
     {_id: 1, name: 'rock', id_user: 4, id_track: 1},
