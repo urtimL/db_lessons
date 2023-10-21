@@ -28,10 +28,6 @@ db.users.updateMany(
 db.tracks.find(
     {},
     {
-		$addToSet: {
-					tags: { 
-							$each: ['fresh', 'popular'] 
-							}
-					}
+		$addToSet: {tags: {	$each: ['fresh', 'popular']}}
 	}
 )
