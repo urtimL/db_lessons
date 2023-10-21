@@ -19,5 +19,5 @@ db.users.updateMany(
 //Добавить всем трекам теги fresh и popular
 db.tracks.find(
     {},
-    {$addToSet: {tags: {	$each: ['fresh', 'popular']}}}
+    {$addToSet: {tags: {$each: ['fresh', 'popular']}}}
 )
